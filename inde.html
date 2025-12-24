@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Réplica</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            menuAzul: "#2563EB",
+                            menuAzulClaro: "#06B6D4",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+ 
+    <body class="bg-gray-50">
+        <!-- 
+        <header class="bg-white py-4 shadow-sm">
+            <div
+                class="max-w-7xl mx-auto px-4 lg:px-8 flex justify-between items-center"
+            >
+                <img
+                    src="images/logo.png"
+                    alt="COBOCE"
+                    class="h-16"
+                />
+
+                <div class="hidden lg:flex space-x-8 text-[13px] text-gray-600">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-map-marker-alt text-menuAzul text-lg"></i>
+                        <div>
+                            <p class="font-semibold text-gray-400">
+                                Av. San Martin N° 0558 entre
+                            </p>
+                            <p>Calama y Ladislao Cabrera</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2 border-l pl-8">
+                        <i class="fas fa-envelope text-menuAzul text-lg"></i>
+                        <div>
+                            <p class="font-semibold text-gray-400">coboce@coboce.com</p>
+                            <p>Envíenos un mensaje</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-2 border-l pl-8">
+                        <i class="fas fa-phone text-menuAzul text-lg"></i>
+                        <div>
+                            <p class="font-semibold text-gray-400">4257733 / 4257735</p>
+                            <p>Contáctenos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        -->
+        <nav class="bg-menuAzul sticky top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4 lg:px-8">
+                <div class="flex justify-between items-center">
+                    <div class="hidden md:flex items-center">
+                        <a
+                            href="#"
+                            class="py-4 px-4 text-white text-[13px] font-bold bg-blue-900 border-b-4 border-menuAzulClaro"
+                            >INICIO
+                        </a>
+
+
+
+                        <div class="relative group h-full">
+    
+                            <a href="#" class="h-full py-4 px-4 text-white text-[13px] font-bold hover:bg-blue-900 transition border-b-4 border-transparent hover:border-menuAzulClaro flex items-center">
+                                EMPRESA
+                            </a>
+
+                            <div class="absolute top-full left-0 w-64 bg-white shadow-2xl hidden group-hover:block z-50">
+                                <div class="flex flex-col text-[12px] text-gray-700">
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">INTRODUCCIÓN</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">RESEÑA HISTÓRICA</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">MISIÓN / VISIÓN</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">PRINCIPIOS COOPERATIVISTAS</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">VALORES COOPERATIVISTAS</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">OBJETIVOS</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">ESTATUTOS</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">MEMORIAS</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">RECONOCIMIENTOS</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 transition-colors uppercase">RESPONSABILIDAD SOCIAL EMPRESARIAL</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="relative group h-full">
+    
+                            <a href="#" class="h-full py-4 px-4 text-white text-[13px] font-bold hover:bg-blue-900 transition border-b-4 border-transparent hover:border-menuAzulClaro flex items-center">
+                                UNIDADES PRODUCTIVAS
+                            </a>
+
+                            <div class="absolute top-full left-0 w-64 bg-white shadow-2xl hidden group-hover:block z-50">
+                                <div class="flex flex-col text-[12px] text-gray-700">
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">COBOCE CEMENTO</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">COBOCE CERAMICA</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">COBOCE CERAMIL</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">COBOCE CONSTRUCCIONES</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">COBOCE HORMINGON</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">COBOCE METAL</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">EDITORA OPINIÓN</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 transition-colors uppercase">EMPRESAS ASOCIADAS</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="relative group h-full">
+                            <a href="#" class="h-full py-4 px-4 text-white text-[13px] font-bold hover:bg-blue-900 transition border-b-4 border-transparent hover:border-menuAzulClaro flex items-center">
+                                ESTRUCTURA ORGANIZATIVA
+                            </a>
+
+                            <div class="absolute top-full left-0 w-64 bg-white shadow-2xl hidden group-hover:block z-50">
+                                <div class="flex flex-col text-[12px] text-gray-700">
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">CONSEJO DE ADMINISTRACIÓN</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">CONESEJO DE VIGILANCIA</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 border-b border-gray-100 transition-colors uppercase">PLANTEL/STAFF EJECUTIVO</a>
+                                    <a href="#" class="px-6 py-3 hover:bg-gray-200 transition-colors uppercase">GERENTES DE UNIDADES</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a
+                            href="#"
+                            class="py-4 px-4 text-white text-[13px] font-bold hover:bg-blue-900 transition border-b-4 border-transparent hover:border-menuAzulClaro"
+                            >COMUNICADOS
+                        </a>
+
+                        <a
+                            href="#"
+                            class="py-4 px-4 text-white text-[13px] font-bold hover:bg-blue-900 transition border-b-4 border-transparent hover:border-menuAzulClaro"
+                            >BLOG
+                        </a>
+
+                        <a
+                            href="#"
+                            class="py-4 px-4 text-white text-[13px] font-bold hover:bg-blue-900 transition border-b-4 border-transparent hover:border-menuAzulClaro"
+                            >CONTACTO
+                        </a>
+                    </div>
+
+                    <div class="flex items-center space-x-4 text-white relative">
+                        <div class="flex items-center bg-white/10 rounded-full transition-all duration-300 overflow-hidden" id="searchContainer">
+                            <input 
+                                type="text" 
+                                id="searchInput"
+                                placeholder="Buscar..." 
+                                class="w-0 bg-transparent outline-none text-sm transition-all duration-300 placeholder-white/70"
+                            >
+                            <i 
+                                id="searchIcon"
+                                class="fas fa-search cursor-pointer p-2 hover:text-menuAzulClaro transition-colors"
+                                onclick="toggleSearch()"
+                            ></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <section class="relative w-full overflow-hidden group">
+            <div id="slider" class="flex transition-transform duration-500 ease-in-out h-[450px] md:h-[600px]">
+                
+                <div class="min-w-full h-full bg-cover bg-center relative flex items-center justify-center" 
+                    style="background-image: url('images/IMG1.jpg');">
+                    
+                    <div class="absolute inset-0 bg-black/40 bg-gradient-to-b from-transparent via-black/20 to-black/60"></div>
+                    
+                    <div class="relative z-10 text-center text-white px-6 max-w-4xl">
+                        <p class="text-sm md:text-base uppercase tracking-[0.3em] mb-4 font-light opacity-90">
+                            BIENVENIDOS A EMPRESA X
+                        </p>
+                        <h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8 drop-shadow-2xl">
+                            SOLUCIONES INTEGRALES <br class="hidden md:block"> PARA TU CRECIMIENTO
+                        </h2>
+                        <div class="flex justify-center">
+                            <a href="#nosotros" class="inline-block bg-menuAzul text-white font-medium py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg uppercase text-sm tracking-wider hover:bg-white hover:text-menuAzulClaro hover:font-bold border-2 border-transparent hover:border-white">
+                                LEER MÁS
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+               <div class="min-w-full h-full bg-cover bg-center flex items-end justify-center pb-20 relative" 
+                    style="background-image: url('images/IMG2.jpg');">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                    
+                    <div class="relative z-10 text-center text-white px-4 max-w-5xl">
+                        <p class="text-sm md:text-base uppercase tracking-[0.3em] mb-3 font-light opacity-90">
+                            Nuestra Experiencia
+                        </p>
+                        
+                        <h2 class="text-4xl md:text-6xl font-extrabold mb-8 drop-shadow-2xl uppercase leading-tight">
+                            SOLUCIONES A MEDIDA <br class="hidden md:block"> PARA CADA DESAFÍO
+                        </h2>
+                        
+                        <a href="#servicios" class="inline-block bg-menuAzul text-white font-medium py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg uppercase text-sm tracking-wider hover:bg-white hover:text-menuAzulClaro hover:font-bold border-2 border-transparent hover:border-white">
+                            CONOCE NUESTROS SERVICIOS
+                        </a>
+                    </div>
+                </div>
+
+                <div class="min-w-full h-full bg-cover bg-center relative flex items-center justify-center" 
+                    style="background-image: url('images/IMG3.jpg');">
+                    
+                    <div class="absolute inset-0 bg-black/30"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20"></div>
+                    
+                    <div class="relative z-10 text-center text-white px-6 max-w-5xl">
+                        <span class="inline-block text-xs md:text-sm uppercase tracking-[0.4em] mb-4 font-semibold">
+                            Excelencia y Calidad
+                        </span>
+                        
+                        <h2 class="text-5xl md:text-7xl font-black leading-tight mb-8 drop-shadow-xl uppercase">
+                            NUESTRAS SOLUCIONES
+                        </h2>
+                        
+                        <p class="text-base md:text-lg font-normal max-w-xl mx-auto mb-10 opacity-90">
+                            Descubra una gama de productos y servicios diseñados para optimizar el rendimiento de su negocio.
+                        </p>
+
+                        <a href="#productos" class="inline-block bg-menuAzul text-white font-medium py-4 px-12 rounded-full transition-all duration-300 hover:bg-white hover:text-menuAzulClaro hover:font-bold shadow-lg uppercase text-sm tracking-wider border-2 border-transparent hover:border-white">
+                            Ver catálogo completo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="min-w-full h-full bg-cover bg-center flex items-end justify-center pb-20 relative" 
+                    style="background-image: url('images/IMG4.jpg');">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                    
+                    <div class="relative z-10 text-center text-white px-4 max-w-5xl">
+                        <p class="text-sm md:text-base uppercase tracking-[0.3em] mb-3 font-light opacity-90">
+                            ¿Listo para empezar?
+                        </p>
+                        
+                        <h2 class="text-4xl md:text-6xl font-extrabold mb-8 drop-shadow-2xl uppercase leading-tight">
+                            IMPULSA TU PROYECTO <br class="hidden md:block"> CON LOS EXPERTOS
+                        </h2>
+                        
+                        <a href="#contacto" class="inline-block bg-menuAzul text-white font-medium py-4 px-12 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg uppercase text-sm tracking-wider hover:bg-white hover:text-menuAzulClaro hover:font-bold border-2 border-transparent hover:border-white">
+                            CONTÁCTANOS AHORA
+                        </a>
+                    </div>
+                </div>
+
+               
+            </div>
+
+
+            <button onclick="moveSlide(-1)" class="absolute left-6 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-miMarino text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 z-20 border border-white/30">
+                <i class="fas fa-chevron-left text-xl"></i>
+            </button>
+            <button onclick="moveSlide(1)" class="absolute right-6 top-1/2 -translate-y-1/2 bg-black/20 hover:bg-miMarino text-white w-12 h-12 rounded-lg flex items-center justify-center transition-all opacity-0 group-hover:opacity-100 z-20 border border-white/30">
+                <i class="fas fa-chevron-right text-xl"></i>
+            </button>
+
+            <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-4 z-20">
+                <button onclick="currentSlide(0)" class="dot w-3 h-3 rounded-full border border-white transition-all bg-white shadow-md"></button>
+                <button onclick="currentSlide(1)" class="dot w-3 h-3 rounded-full border border-white transition-all shadow-md"></button>
+                <button onclick="currentSlide(2)" class="dot w-3 h-3 rounded-full border border-white transition-all shadow-md"></button>
+                <button onclick="currentSlide(3)" class="dot w-3 h-3 rounded-full border border-white transition-all shadow-md"></button>
+            </div>
+        </section>
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section id="nosotros" class="py-24 bg-white overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-16">
+                    
+                    <div class="w-full md:w-1/2 relative">
+                        <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+                            <img src="images/empresa-foto.jpg" alt="Equipo Empresa X" class="w-full h-auto object-cover">
+                        </div>
+                        <div class="absolute -bottom-6 -right-6 w-64 h-64 bg-menuAzulClaro/10 rounded-full -z-0"></div>
+                    </div>
+
+                    <div class="w-full md:w-1/2">
+                        <span class="text-menuAzul font-bold uppercase tracking-[0.3em] text-sm">Trayectoria y Confianza</span>
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mt-4 mb-8 leading-tight">
+                            Impulsando el éxito de nuestros clientes desde la <span class="text-menuAzul">Empresa X</span>
+                        </h2>
+                        
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                            Somos una organización dedicada a ofrecer soluciones integrales diseñadas para potenciar el crecimiento sostenible. Nuestra filosofía se basa en la excelencia operativa y un compromiso inquebrantable con la calidad.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
+                            <div>
+                                <h4 class="font-bold text-gray-800 flex items-center gap-2">
+                                    <i class="fas fa-check-circle text-menuAzulClaro"></i> Misión
+                                </h4>
+                                <p class="text-gray-500 text-sm mt-2">Proveer herramientas innovadoras que transformen los desafíos de hoy en oportunidades de mañana.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 flex items-center gap-2">
+                                    <i class="fas fa-eye text-menuAzulClaro"></i> Visión
+                                </h4>
+                                <p class="text-gray-500 text-sm mt-2">Ser el referente líder en el mercado global, reconocidos por nuestra eficiencia y valor agregado.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-menuAzul font-bold uppercase tracking-[0.3em] text-sm">Nuestra Experiencia</span>
+                    <h2 class="text-4xl md:text-5xl font-black text-gray-900 mt-4 mb-6">Soluciones a Medida</h2>
+                    <p class="text-gray-600 text-lg">
+                        Desarrollamos estrategias personalizadas para optimizar cada área de su negocio, garantizando resultados medibles y un crecimiento sostenido.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-transparent hover:border-menuAzul group">
+                        <div class="w-14 h-14 bg-menuAzul/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-menuAzul transition-colors">
+                            <i class="fas fa-chart-pie text-menuAzul text-2xl group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Análisis Estratégico</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Evaluamos profundamente su situación actual para identificar oportunidades de mejora y puntos críticos de éxito.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-transparent hover:border-menuAzulClaro group">
+                        <div class="w-14 h-14 bg-menuAzulClaro/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-menuAzulClaro transition-colors">
+                            <i class="fas fa-microchip text-menuAzulClaro text-2xl group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Implementación Tecnológica</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Integramos herramientas digitales de última generación para automatizar procesos y reducir costos operativos.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border-b-4 border-transparent hover:border-menuAzul group">
+                        <div class="w-14 h-14 bg-menuAzul/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-menuAzul transition-colors">
+                            <i class="fas fa-handshake text-menuAzul text-2xl group-hover:text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Acompañamiento Continuo</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            No solo entregamos soluciones; nos convertimos en sus socios estratégicos para asegurar que los objetivos se cumplan.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section id="productos" class="py-24 bg-white">
+            <div class="container mx-auto px-6">
+                
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                    <div class="max-w-2xl">
+                        <span class="text-menuAzul font-bold uppercase tracking-[0.3em] text-sm">Calidad y Variedad</span>
+                        <h2 class="text-4xl md:text-5xl font-black text-gray-900 mt-4">Nuestras Líneas de Soluciones</h2>
+                    </div>
+                    <p class="text-gray-500 max-w-sm pb-2">
+                        Explora nuestra selección de productos diseñados bajo los más altos estándares internacionales.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    
+                    <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg bg-gray-900">
+                        <img src="images/default-product.png" alt="Producto 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-60">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                        
+                        <div class="absolute inset-0 flex flex-col justify-end p-6">
+                            <div class="transform transition-all duration-300 group-hover:-translate-y-4">
+                                <h4 class="text-white font-bold text-xl uppercase tracking-wider">Línea Premium</h4>
+                                <p class="text-white/80 text-xs mt-1 font-light italic">Alta durabilidad y diseño</p>
+                            </div>
+                            
+                            <div class="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                <button class="bg-menuAzul text-white font-bold py-2 px-6 rounded-full text-xs uppercase hover:bg-white hover:text-menuAzul transition-colors">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="group relative h-80 rounded-2xl overflow-hidden shadow-lg bg-gray-900">
+                        <img src="images/arroz.jpg" alt="Producto 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-60">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                        
+                        <div class="absolute inset-0 flex flex-col justify-end p-6">
+                            <div class="transform transition-all duration-300 group-hover:-translate-y-4">
+                                <h4 class="text-white font-bold text-xl uppercase tracking-wider">Tecnología</h4>
+                                <p class="text-white/80 text-xs mt-1 font-light italic">Innovación constante</p>
+                            </div>
+                            
+                            <div class="mt-4 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
+                                <button class="bg-menuAzul text-white font-bold py-2 px-6 rounded-full text-xs uppercase hover:bg-white hover:text-menuAzul transition-colors">
+                                    Ver Detalles
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row gap-16">
+                    <div class="lg:w-1/3">
+                        <span class="text-blue-600 font-bold uppercase tracking-widest text-sm">Hablemos</span>
+                        <h2 class="text-4xl font-black text-gray-900 mt-4 mb-8">¿Listo para potenciar su proyecto?</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="text-blue-600 mt-1"><i class="fas fa-map-marker-alt text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Ubicación</h4>
+                                    <p class="text-gray-600">Av. Principal Edificio Corporativo, Piso 5.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="text-blue-600 mt-1"><i class="fas fa-phone-alt text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Teléfono</h4>
+                                    <p class="text-gray-600" dir="ltr">+123 456 7890</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="text-blue-600 mt-1"><i class="fas fa-envelope text-xl"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">contacto@empresax.com</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-8 mt-4 border-t border-gray-100">
+                                <p class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Acompañe a Empresa X</p>
+                                <div class="flex items-center gap-3">
+                                    <a href="https://wa.me/tu-numero" target="_blank" 
+                                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-900 text-white transition-all duration-300 hover:bg-white hover:text-[#25D366] hover:shadow-lg group">
+                                        <i class="fab fa-whatsapp text-lg group-hover:font-bold"></i>
+                                    </a>
+
+                                    <a href="https://instagram.com/tu-perfil" target="_blank" 
+                                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-900 text-white transition-all duration-300 hover:bg-white hover:text-[#E4405F] hover:shadow-lg group">
+                                        <i class="fab fa-instagram text-lg group-hover:font-bold"></i>
+                                    </a>
+
+                                    <a href="https://facebook.com/tu-pagina" target="_blank" 
+                                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-900 text-white transition-all duration-300 hover:bg-white hover:text-[#1877F2] hover:shadow-lg group">
+                                        <i class="fab fa-facebook-f text-lg group-hover:font-bold"></i>
+                                    </a>
+
+                                    <a href="https://youtube.com/tu-canal" target="_blank" 
+                                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-900 text-white transition-all duration-300 hover:bg-white hover:text-[#FF0000] hover:shadow-lg group">
+                                        <i class="fab fa-youtube text-lg group-hover:font-bold"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:w-2/3 bg-white p-10 rounded-3xl shadow-xl border-t-8 border-blue-600">
+                        <form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2 uppercase">Nombre Completo</label>
+                                <input type="text" placeholder="Ej: Juan Pérez" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-none transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2 uppercase">Correo Electrónico</label>
+                                <input type="email" placeholder="correo@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-none transition-all">
+                            </div>
+                            <div class="md:col-span-2">
+                                <label class="block text-sm font-bold text-gray-700 mb-2 uppercase">Mensaje</label>
+                                <textarea rows="4" placeholder="¿En qué podemos ayudarle?" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/20 outline-none transition-all"></textarea>
+                            </div>
+                            <div class="md:col-span-2">
+                                <button type="submit" class="w-full bg-blue-600 text-white font-black py-4 rounded-xl uppercase tracking-widest hover:bg-blue-700 transition-all shadow-lg shadow-blue-600/30">
+                                    Enviar Mensaje
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+
+
+
+        <footer class="bg-[#12181f] text-gray-400 py-12 border-t border-gray-800">
+            <div class="container mx-auto px-6">
+                
+                <div class="flex flex-col items-center mb-10">
+                    <div class="mb-6">
+                        <h2 class="text-3xl font-black text-white tracking-tighter">
+                            EMPRESA <span class="text-blue-600">X</span>
+                        </h2>
+                    </div>
+
+                    
+                </div>
+
+                <div class="text-center text-xs space-y-2 border-b border-gray-800 pb-8 mb-8">
+                    <p class="uppercase tracking-widest font-bold text-gray-500">Empresa X S.A. | NIT: 00.000.000/0001-00</p>
+                    <p>© 2025 - Copyright Empresa X - Todos los derechos reservados</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-xs font-medium uppercase tracking-tight">
+                    <a href="#" class="hover:text-white transition-colors">Atención al cliente</a>
+                    <a href="#" class="hover:text-white transition-colors">Política de privacidad y seguridad</a>
+                    <a href="#" class="hover:text-white transition-colors">Política de cookies</a>
+                    <a href="#" class="hover:text-white transition-colors">Términos y condiciones</a>
+                </div>
+
+            </div>
+        </footer>
+        
+
+        <script>
+            let index = 0;
+            const slider = document.getElementById('slider');
+            const dots = document.querySelectorAll('.dot');
+            const totalSlides = 4;
+
+            function updateSlider() {
+              
+                slider.style.transform = `translateX(-${index * 100}%)`;
+                
+                // Actualiza los puntitos
+                dots.forEach((dot, i) => {
+                    if(i === index) dot.classList.add('bg-white');
+                    else dot.classList.remove('bg-white');
+                });
+            }
+
+            function moveSlide(step) {
+                index += step;
+                if (index >= totalSlides) index = 0;
+                if (index < 0) index = totalSlides - 1;
+                updateSlider();
+            }
+
+            function currentSlide(n) {
+                index = n;
+                updateSlider();
+            }
+
+            // Opcional: Auto-reproducción cada 12 segundos
+            setInterval(() => moveSlide(1), 12000);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); 
+
+                const targetId = this.getAttribute('href');
+                
+                // Evitamos errores si el href es solo "#"
+                if (targetId === "#") return;
+
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Mantenemos el offset de 80px para que el menú no tape los títulos
+                    const offsetPosition = targetElement.offsetTop - 80;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth' 
+                    });
+                }
+            });
+        });
+
+
+
+
+
+
+
+
+
+        function toggleSearch() {
+            const container = document.getElementById('searchContainer');
+            const input = document.getElementById('searchInput');
+            
+            // Si la barra está cerrada (ancho 0), la abrimos
+            if (input.style.width === '0px' || input.style.width === '') {
+                container.classList.add('bg-white/20', 'px-3', 'border', 'border-white/30'); // Estilo activo
+                input.style.width = '180px'; // El ancho que desees que alcance
+                input.focus();
+            } else {
+                // Si ya está abierta y el usuario hace clic de nuevo sin escribir nada, la cerramos
+                if (input.value === "") {
+                    closeSearch();
+                } else {
+                    // Aquí podrías ejecutar la búsqueda real
+                    console.log("Buscando: " + input.value);
+                }
+            }
+        }
+
+        function closeSearch() {
+            const container = document.getElementById('searchContainer');
+            const input = document.getElementById('searchInput');
+            container.classList.remove('bg-white/20', 'px-3', 'border', 'border-white/30');
+            input.style.width = '0px';
+        }
+
+        // Opcional: Cerrar al hacer clic fuera del buscador
+        document.addEventListener('click', function(event) {
+            const container = document.getElementById('searchContainer');
+            const isClickInside = container.contains(event.target);
+
+            if (!isClickInside) {
+                closeSearch();
+            }
+        });
+        </script>
+
+    </body>
+</html>
